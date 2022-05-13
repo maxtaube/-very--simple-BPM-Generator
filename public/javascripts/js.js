@@ -1,5 +1,5 @@
 console.log("test");
-var audio = new Audio('clap.wav');
+var audio = new Audio('../media/clap.wav');
 audio.preload = 'auto';
 audio.load();
 
@@ -14,7 +14,7 @@ var halfBpmInMillSec = (MILLSECONDSINMINUTE / bpm) / 2;
 var Interval = setInterval(function() {
     var clap = audio.cloneNode();
     clap.play();
-        document.getElementById("box").style.backgroundColor = "black"; 
+    document.getElementById("box").style.backgroundColor = "black"; 
     setTimeout(() => {
         document.getElementById("box").style.backgroundColor = "white";
     }, halfBpmInMillSec);
